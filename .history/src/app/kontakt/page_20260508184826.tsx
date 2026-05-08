@@ -46,11 +46,11 @@ export default function KontaktPage() {
 
                     {/* EMAIL */}
                     <div className={styles.row}>
-
+                        <IconMail />
                         <a
                             href="mailto:justynabrzezinska.atelier@gmail.com?subject=Rezerwacja wizyty Beauty Atelier&body=Dzień dobry,%0D%0AChciałabym umówić wizytę."
                         >
-                            <IconMail /> justynabrzezinska.atelier@gmail.com
+                            justynabrzezinska.atelier@gmail.com
                         </a>
                     </div>
 

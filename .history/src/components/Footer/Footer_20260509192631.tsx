@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { services } from "@/lib/services";
 
-
 export default function Footer() {
     return (
         <footer className={styles.footer}>
@@ -39,9 +38,7 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                {/* SERVICES */}
-
-
+                {/* SERVICES (DYNAMICZNE) */}
                 <div className={styles.column}>
                     <h3>Usługi</h3>
 
@@ -51,7 +48,7 @@ export default function Footer() {
                                 key={service.slug}
                                 href={`/uslugi/${service.slug}`}
                             >
-                                {service.seoTitle} Kielce
+                                {service.title}
                             </Link>
                         ))}
                     </div>
@@ -112,7 +109,6 @@ export default function Footer() {
         </footer>
     );
 }
-
 function InstagramIcon() {
     return (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">

@@ -141,18 +141,18 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            <section className={styles.cta}>
-                <div className="container">
-                    <h2>Zarezerwuj swój termin</h2>
+            {/* <section className={styles.cta}> */}
+            <div className="container">
+                <h2>Zarezerwuj swój termin</h2>
 
-                    <p>
-                        Skontaktuj się i stwórzmy wyjątkową stylizację
-                        dopasowaną do Ciebie.
-                    </p>
+                <p>
+                    Skontaktuj się i stwórzmy wyjątkową stylizację
+                    dopasowaną do Ciebie.
+                </p>
 
-                    <a href="/kontakt">Umów wizytę</a>
-                </div>
-            </section>
+                <a href="/kontakt">Umów wizytę</a>
+            </div>
+            {/* </section> */}
         </main>
     );
 }

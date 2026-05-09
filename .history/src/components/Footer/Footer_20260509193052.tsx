@@ -51,7 +51,7 @@ export default function Footer() {
                                 key={service.slug}
                                 href={`/uslugi/${service.slug}`}
                             >
-                                {service.seoTitle} Kielce
+                                {service.title} Kielce
                             </Link>
                         ))}
                     </div>

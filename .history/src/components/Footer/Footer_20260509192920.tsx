@@ -1,8 +1,6 @@
 import styles from "./Footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { services } from "@/lib/services";
-
 
 export default function Footer() {
     return (
@@ -40,20 +38,25 @@ export default function Footer() {
                 </div>
 
                 {/* SERVICES */}
-
-
                 <div className={styles.column}>
                     <h3>Usługi</h3>
 
                     <div className={styles.links}>
-                        {services.map((service) => (
-                            <Link
-                                key={service.slug}
-                                href={`/uslugi/${service.slug}`}
-                            >
-                                {service.seoTitle} Kielce
-                            </Link>
-                        ))}
+                        <Link href="/uslugi">
+                            Makijaż ślubny Kielce
+                        </Link>
+
+                        <Link href="/uslugi">
+                            Makijaż okolicznościowy
+                        </Link>
+
+                        <Link href="/uslugi">
+                            Stylizacja włosów Kielce
+                        </Link>
+
+                        <Link href="/uslugi">
+                            Beauty & Photo
+                        </Link>
                     </div>
                 </div>
 

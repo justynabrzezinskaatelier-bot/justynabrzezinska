@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { services } from "@/lib/services";
 
-
 export default function Footer() {
     return (
         <footer className={styles.footer}>
@@ -39,9 +38,7 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                {/* SERVICES */}
-
-
+                {/* SERVICES (DYNAMICZNE) */}
                 <div className={styles.column}>
                     <h3>Usługi</h3>
 
@@ -51,7 +48,7 @@ export default function Footer() {
                                 key={service.slug}
                                 href={`/uslugi/${service.slug}`}
                             >
-                                {service.seoTitle} Kielce
+                                {service.title}
                             </Link>
                         ))}
                     </div>
@@ -110,47 +107,5 @@ export default function Footer() {
                 </p>
             </div>
         </footer>
-    );
-}
-
-function InstagramIcon() {
-    return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <rect
-                x="3"
-                y="3"
-                width="18"
-                height="18"
-                rx="5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-            />
-            <circle
-                cx="12"
-                cy="12"
-                r="4"
-                stroke="currentColor"
-                strokeWidth="1.5"
-            />
-            <circle
-                cx="17.5"
-                cy="6.5"
-                r="1"
-                fill="currentColor"
-            />
-        </svg>
-    );
-}
-
-function FacebookIcon() {
-    return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path
-                d="M14 8h2V4h-2c-2.2 0-4 1.8-4 4v2H8v4h2v6h4v-6h2.5l.5-4H14V8c0-.6.4-1 1-1z"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinejoin="round"
-            />
-        </svg>
     );
 }

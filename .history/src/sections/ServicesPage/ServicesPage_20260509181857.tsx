@@ -99,9 +99,7 @@ export default function ServicesPage() {
 
                                     <p>{service.description}</p>
 
-                                    <Link href={`/uslugi/${service.slug}`}>
-                                        Dowiedz się więcej
-                                    </Link>
+                                    <a href={`/uslugi/${service.slug}`}>Dowiedz się więcej</a>
                                 </div>
                             </article>
                         ))}

@@ -111,7 +111,6 @@
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.5);
 
-
     /* ANIMATION */
     opacity: 0;
     visibility: hidden;
@@ -125,20 +124,6 @@
         opacity 0.28s ease,
         transform 0.28s ease,
         visibility 0.28s ease;
-}
-
-.callDropdown a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 18px 20px;
-    transition: 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.callDropdown a:hover {
-    background: rgba(87, 87, 87, 0.5);
 }
 
 /* OPEN STATE */

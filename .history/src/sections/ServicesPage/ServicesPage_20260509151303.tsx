@@ -66,19 +66,19 @@ export default function ServicesPage() {
     return (
         <main className={styles.page}>
             <section className={styles.hero}>
+                <div className="container">
+                    <p className={styles.label}>Beauty Atelier</p>
 
-                <p className={styles.label}>Beauty Atelier</p>
+                    <h1>
+                        Makijaż i stylizacja włosów
+                        <span> w Kielcach</span>
+                    </h1>
 
-                <h1>
-                    Makijaż i stylizacja włosów
-                    <span> w Kielcach</span>
-                </h1>
-
-                <p className={styles.description}>
-                    Luxury Makeup & Hair Studio tworzone z pasji do
-                    estetyki, trwałości i indywidualnego podejścia.
-                </p>
-
+                    <p className={styles.description}>
+                        Luxury Makeup & Hair Studio tworzone z pasji do
+                        estetyki, trwałości i indywidualnego podejścia.
+                    </p>
+                </div>
             </section>
 
             <section className={styles.services}>

@@ -1,5 +1,5 @@
 import styles from "./Kontakt.module.css";
-import ContactCard from "./ContactCard";
+import ContactCard from "/ContactCard";
 
 export const metadata = {
     title: "Kontakt | Beauty Atelier Kielce",

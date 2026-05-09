@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
 
 import "@/styles/globals.css";
 
@@ -62,7 +61,6 @@ export default function RootLayout({
       <body className={`${cormorant.variable} ${montserrat.variable}`}>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );

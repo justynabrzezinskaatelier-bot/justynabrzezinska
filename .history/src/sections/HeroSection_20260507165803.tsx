@@ -24,7 +24,7 @@ export default function HeroSection() {
                 </p>
 
                 <div className={styles.actions}>
-                    <a href="/kontakt" className={styles.primary}>
+                    <a href="#contact" className={styles.primary}>
                         Umów wizytę
                     </a>
 

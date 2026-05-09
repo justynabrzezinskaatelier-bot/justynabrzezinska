@@ -62,7 +62,7 @@ export default function RootLayout({
       <body className={`${cormorant.variable} ${montserrat.variable}`}>
         <Navbar />
         {children}
-        <Footer />
+
       </body>
     </html>
   );

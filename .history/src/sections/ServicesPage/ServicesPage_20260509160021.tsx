@@ -66,7 +66,7 @@ export default function ServicesPage() {
     return (
         <main className={styles.page}>
             <section className={styles.hero}>
-
+                {/* <div className="container"> */}
                 <p className={styles.label}>Beauty Atelier</p>
 
                 <h1>
@@ -78,7 +78,7 @@ export default function ServicesPage() {
                     Luxury Makeup & Hair Studio tworzone z pasji do
                     estetyki, trwałości i indywidualnego podejścia.
                 </p>
-
+                {/* </div> */}
             </section>
 
             <section className={styles.services}>

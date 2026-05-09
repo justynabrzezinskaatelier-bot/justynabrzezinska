@@ -17,7 +17,7 @@
     font-size: 13px;
 }
 
-.phoneLabel {
+.phoneLabel p {
     color: #c8a96a;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -63,7 +63,7 @@
 
 .card p {
     margin-bottom: 12px;
-    /* color: rgba(255, 255, 255, 0.75); */
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .cta {
@@ -72,7 +72,6 @@
     padding: 12px 24px;
     border: 1px solid #c8a96a;
     color: #c8a96a;
-    background: transparent;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 12px;
@@ -82,74 +81,6 @@
 .cta:hover {
     background: #c8a96a;
     color: #0b0b0d;
-}
-
-.callWrapper {
-    position: relative;
-    margin-top: 32px;
-}
-
-.callDropdown {
-    position: absolute;
-    top: calc(100% + 14px);
-    left: 0;
-
-    width: 100%;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    background: rgba(15, 15, 18, 0.96);
-
-    backdrop-filter: blur(14px);
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    z-index: 20;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.5);
-
-
-    /* ANIMATION */
-    opacity: 0;
-    visibility: hidden;
-
-    transform:
-        translateY(-10px) scale(0.98);
-
-    pointer-events: none;
-
-    transition:
-        opacity 0.28s ease,
-        transform 0.28s ease,
-        visibility 0.28s ease;
-}
-
-.callDropdown a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 18px 20px;
-    transition: 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.callDropdown a:hover {
-    background: rgba(87, 87, 87, 0.5);
-}
-
-/* OPEN STATE */
-.dropdownOpen {
-    opacity: 1;
-    visibility: visible;
-
-    transform:
-        translateY(0) scale(1);
-
-    pointer-events: auto;
 }
 
 /* MAP */

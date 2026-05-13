@@ -155,20 +155,6 @@ export default function RootLayout({
   return (
     <html lang="pl" data-scroll-behavior="smooth">
       <body className={`${cormorant.variable} ${montserrat.variable}`}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-J5RJF28SQW"
-          strategy="afterInteractive"
-        />
-
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-J5RJF28SQW');
-    `}
-        </Script>
         <StructuredData />
         <Navbar />
         {children}

@@ -106,7 +106,7 @@ export default function Footer() {
             <div className={styles.bottom}>
                 <p>
                     © {new Date().getFullYear()} Justyna Brzezińska Beauty Atelier.
-                    All rights reserved.
+                    Wszelkie prawa zastrzeżone.
                 </p>
             </div>
         </footer>

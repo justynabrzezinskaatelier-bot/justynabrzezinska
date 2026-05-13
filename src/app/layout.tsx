@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import StructuredData from "@/components/SEO/StructuredData";
 
 import "@/styles/globals.css";
 
@@ -16,9 +17,98 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Justyna Brzezińska Beauty Atelier",
+  metadataBase: new URL("https://justynabrzezinska.vercel.app"),
+
+  title: {
+    default: "Justyna Brzezińska Beauty Atelier",
+    template: "%s | Justyna Brzezińska Beauty Atelier",
+  },
+
   description:
-    "Makijaż i stylizacja włosów w Kielcach. Makeup & Hair Studio.",
+    "Profesjonalny makijaż i stylizacja włosów w Kielcach. Makijaż ślubny, okolicznościowy, fryzury oraz usługi beauty tworzone z pasją i perfekcją.",
+
+  keywords: [
+    "makijaż Kielce",
+    "makijaż ślubny Kielce",
+    "makijażystka Kielce",
+    "stylizacja włosów Kielce",
+    "fryzury ślubne Kielce",
+    "beauty atelier Kielce",
+    "make up Kielce",
+    "makijaż okolicznościowy Kielce",
+    "wizażystka Kielce",
+    "beauty photo Kielce",
+  ],
+
+  authors: [
+    {
+      name: "Justyna Brzezińska Beauty Atelier",
+    },
+  ],
+
+  creator: "Justyna Brzezińska Beauty Atelier",
+
+  publisher: "Justyna Brzezińska Beauty Atelier",
+
+  category: "Beauty",
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://justynabrzezinska.vercel.app",
+  },
+
+  openGraph: {
+    type: "website",
+
+    locale: "pl_PL",
+
+    url: "https://justynabrzezinska.vercel.app",
+
+    siteName: "Justyna Brzezińska Beauty Atelier",
+
+    title: "Justyna Brzezińska Beauty Atelier",
+
+    description:
+      "Profesjonalny makijaż i stylizacja włosów w Kielcach. Makeup & Hair Studio.",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Justyna Brzezińska Beauty Atelier",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Justyna Brzezińska Beauty Atelier",
+
+    description:
+      "Makijaż ślubny, stylizacja włosów i profesjonalne usługi beauty w Kielcach.",
+
+    images: ["/og-image.jpg"],
+  },
+
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
 
   icons: {
     icon: [
@@ -44,12 +134,16 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
     title: "JB Atelier",
   },
 };
 
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -60,6 +154,7 @@ export default function RootLayout({
   return (
     <html lang="pl" data-scroll-behavior="smooth">
       <body className={`${cormorant.variable} ${montserrat.variable}`}>
+        <StructuredData />
         <Navbar />
         {children}
         <Footer />

@@ -21,13 +21,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://justynabrzezinska.vercel.app"),
 
   title: {
-    default: "Justyna Brzezińska Beauty Atelier",
+    default:
+      "Justyna Brzezińska Beauty Atelier - Make Up & Hair Studio Kielce",
+
     template: "%s | Justyna Brzezińska Beauty Atelier",
   },
 
   description:
-    "Profesjonalny makijaż i stylizacja włosów w Kielcach. Makijaż ślubny, okolicznościowy, fryzury oraz usługi beauty tworzone z pasją i perfekcją.",
-
+    "Justyna Brzezińska Beauty Atelier - profesjonalne Make Up & Hair Studio w Kielcach. Makijaż ślubny, makijaż okolicznościowy, stylizacja włosów, fryzury ślubne oraz usługi beauty photo tworzone z pasją i perfekcją.",
   keywords: [
     "makijaż Kielce",
     "makijaż ślubny Kielce",
@@ -77,7 +78,7 @@ export const metadata: Metadata = {
 
     url: "https://justynabrzezinska.vercel.app",
 
-    siteName: "Justyna Brzezińska Beauty Atelier",
+    siteName: "Justyna Brzezińska Beauty Atelier - Make Up & Hair Studio",
 
     title: "Justyna Brzezińska Beauty Atelier",
 

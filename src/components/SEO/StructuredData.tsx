@@ -8,7 +8,11 @@ export default function StructuredData() {
 
         name: "Justyna Brzezińska Beauty Atelier",
 
-        alternateName: "JB Atelier",
+        alternateName: [
+            "JB Atelier",
+            "Justyna Brzezińska Make Up & Hair Studio",
+            "Beauty Atelier Kielce",
+        ],
 
         description:
             "Profesjonalny makijaż i stylizacja włosów w Kielcach. Makijaż ślubny, okolicznościowy, fryzury oraz usługi beauty premium.",

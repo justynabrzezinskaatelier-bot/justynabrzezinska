@@ -30,6 +30,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# local font download scratch files
+/.npm-cache/
+/fontsource-extract-local/
+/fontsource-variable-*.tgz
+
 # env files (can opt-in for committing if needed)
 .env*
 

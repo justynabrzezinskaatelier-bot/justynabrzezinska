@@ -1,56 +1,37 @@
-import { MetadataRoute } from "next";
-
-const baseUrl = "https://justynabrzezinska.vercel.app";
+import type { MetadataRoute } from "next";
+import { absoluteUrl, siteConfig } from "@/config/site";
+import { services } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const pages = [
-        {
-            url: "",
-            priority: 1,
-            changeFrequency: "weekly" as const,
-        },
+  const lastModified = new Date(siteConfig.lastUpdated);
 
-        {
-            url: "/uslugi",
-            priority: 0.9,
-            changeFrequency: "weekly" as const,
-        },
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: absoluteUrl("/"),
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: absoluteUrl("/uslugi"),
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: absoluteUrl("/kontakt"),
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+  ];
 
-        {
-            url: "/kontakt",
-            priority: 0.8,
-            changeFrequency: "monthly" as const,
-        },
+  const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
+    url: absoluteUrl(`/uslugi/${service.slug}`),
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
 
-        {
-            url: "/uslugi/makijaz-slubny-kielce",
-            priority: 0.95,
-            changeFrequency: "weekly" as const,
-        },
-
-        {
-            url: "/uslugi/makijaz-okolicznosciowy-kielce",
-            priority: 0.9,
-            changeFrequency: "weekly" as const,
-        },
-
-        {
-            url: "/uslugi/stylizacja-wlosow-kielce",
-            priority: 0.9,
-            changeFrequency: "weekly" as const,
-        },
-
-        {
-            url: "/uslugi/beauty-photo-kielce",
-            priority: 0.85,
-            changeFrequency: "monthly" as const,
-        },
-    ];
-
-    return pages.map((page) => ({
-        url: `${baseUrl}${page.url}`,
-        lastModified: new Date(),
-        changeFrequency: page.changeFrequency,
-        priority: page.priority,
-    }));
+  return [...staticPages, ...servicePages];
 }

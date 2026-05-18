@@ -14,7 +14,7 @@
 @media (min-width: 768px) {
     .hero {
 
-        background: url("../../public/Mauke-up.webp") center/cover no-repeat;
+        background: url("/Mauke-up.webp") center/cover no-repeat;
         background-attachment: fixed;
     }
 }
